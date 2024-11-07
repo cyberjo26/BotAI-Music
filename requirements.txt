@@ -1,6 +1,6 @@
 discord.py
 hercai
 yt-dlp
+opuslib
 imageio[ffmpeg]
 PyNaCl
-opuslib
