@@ -1,3 +1,4 @@
 discord.py
 hercai
+yt-dlp
 imageio[ffmpeg]
