@@ -3,3 +3,4 @@ hercai
 yt-dlp
 imageio[ffmpeg]
 PyNaCl
+opuslib
