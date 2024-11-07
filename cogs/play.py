@@ -13,10 +13,12 @@ ytdl_format_options = {
     }],
     'noplaylist': True,
 }
+ffmpeg_path = ffmpeg.get_ffmpeg_exe()
+
 ffmpeg_options = {
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
     'options': '-vn',
-    'executable': 'C:\\ffmpeg\\bin\\ffmpeg.exe'
+    'executable': ffmpeg_path  # Gunakan path dari imageio_ffmpeg
 }
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
