@@ -17,8 +17,5 @@ async def on_ready():
     print(f'Logged in as {bot.user}')
     await load_cogs(bot)
 
-if not discord.opus.is_loaded():
-    discord.opus.load_opus('libopus.so.0')
-
 # Memuat token dari environment variable
 bot.run(os.getenv("DISCORD_TOKEN"))
