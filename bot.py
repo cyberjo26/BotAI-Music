@@ -7,7 +7,6 @@ async def load_cogs(bot):
         if filename.endswith(".py") and filename != "__init__.py":
             await bot.load_extension(f'cogs.{filename[:-3]}')
 
-
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
 @bot.event
@@ -15,4 +14,5 @@ async def on_ready():
     print(f'Logged in as {bot.user}')
     await load_cogs(bot)
 
-bot.run('YOUR_TOKEN_BOT')
+# Memuat token dari environment variable
+bot.run(os.getenv("DISCORD_TOKEN"))
