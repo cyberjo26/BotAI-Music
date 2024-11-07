@@ -1,17 +1,17 @@
-# Gunakan image Python dasar yang ringan
+# Gunakan image dasar Python
 FROM python:3.9-slim
 
-# Update package manager dan install libopus dan FFmpeg
-RUN apt update && apt install -y libopus0 ffmpeg
+# Update package manager dan install libopus-dev dan FFmpeg
+RUN apt update && apt install -y libopus-dev ffmpeg
 
 # Setel direktori kerja di dalam container
 WORKDIR /app
 
-# Copy semua file dari proyek ke dalam direktori kerja
+# Copy semua file proyek ke dalam direktori kerja
 COPY . /app
 
 # Install dependensi Python dari requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Tentukan perintah yang akan dijalankan untuk memulai bot
+# Tentukan perintah untuk memulai bot
 CMD ["python3", "bot.py"]
